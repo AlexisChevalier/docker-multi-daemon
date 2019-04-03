@@ -1,7 +1,7 @@
 #! /bin/bash
 
 USE_REMOTE_DOCKER_FILE=~/.useRemoteDocker
-REMOTE_DAEMON="ssh://alexis@192.168.1.20"
+REMOTE_DAEMON="ssh://user@remotehost"
 
 #Defining which daemon will be used
 if [ -f $USE_REMOTE_DOCKER_FILE ]
