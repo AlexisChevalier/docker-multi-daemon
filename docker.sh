@@ -1,8 +1,5 @@
 #! /bin/bash
 
-EXEC_TYPE="$1"
-shift 1
-
 USE_REMOTE_DOCKER_FILE=~/.useRemoteDocker
 REMOTE_DAEMON="ssh://user@remotehost"
 
@@ -24,13 +21,4 @@ else
 	DOCKER_OPTS=""
 fi
 
-#Executing proper command
-if [ "$EXEC_TYPE" == "docker" ]
-then
-	docker $DOCKER_OPTS "$@"
-elif [ "$EXEC_TYPE" == "compose" ]
-then
-	docker-compose $DOCKER_OPTS "$@"
-else
-	echo "Exec '$EXEC_TYPE' is unknown"
-fi
+_docker $DOCKER_OPTS "$@"
