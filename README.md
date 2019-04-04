@@ -1,6 +1,6 @@
-# docker-multi-daemon
+# docker-multi-daemon-osx
 
-Simple tool to enable docker usage through multiple daemons
+Simple tool to enable docker usage through multiple daemons on an OSX host
 
 ### Usage
 
